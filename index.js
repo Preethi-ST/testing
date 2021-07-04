@@ -8,7 +8,8 @@ const PORT = process.env.PORT || 5001;
 
 //const mongoose = require('mongoose');
 //const url = 'mongodb://localhost/test';
-const url = 'mongodb+srv://preethist:guvi123@cluster0.1nusq.mongodb.net/testData'
+const url = process.env.MONGODB_URI || 'mongodb://localhost/test' ;
+//const url = 'mongodb+srv://preethist:guvi123@cluster0.1nusq.mongodb.net/testData'
 
 /* {useNewUrlParser:"true"} => Given so that we no need to mention port - 27017 */
 mongoose.connect(url,{useNewUrlParser:"true",useUnifiedTopology: true});
